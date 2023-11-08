@@ -1,0 +1,81 @@
+@font-face {
+    font-family:"lobster" ;
+    src: url("./Lobster.otf");
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body{
+    background-color: #d3d3d3;
+  }
+
+header{
+    /*placement des block*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /*taille et apparence de base du header*/
+    width: 100vw;
+    height: 20vh;
+    background-color: #800080;
+    color: #1885a0;
+    font-family: lobster ;
+    /*image de fond du header*/
+    background-image: url(../assets/background_blackhole.png);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-position-y: 40%;
+    background-size: cover;
+}
+
+header>h1{
+    font-size: 7vh;
+}
+
+header>h2{
+    font-size: 5vh;
+}
+
+nav{
+    height: 80vh;
+    width: 15vw;
+    background-color: #ff0000;
+    display: flex;
+    flex-direction: column;/**/
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+.bouton{
+    color: #000000;
+    text-decoration: none;
+    font-size: 4vh ;
+    width: 10vw;
+    font-family: lobster ;
+    display: block;
+    background-color: #00ffff;
+    border-radius: 0.8vh;
+    padding: 1vw;
+    text-align: center;
+
+}
+
+.bouton:hover{
+    background-color: #000000;
+    color: #00ffff;
+
+}
+
+main {
+
+}
+
+footer{
+
+
+}
