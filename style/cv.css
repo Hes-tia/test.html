@@ -1,46 +1,59 @@
+@font-face {
+    font-family:"bricks" ;
+    src: url(../style/brick.ttf);
+}
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-header{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 100vw;
-    height: 25vh;
-    background-image: url(../assets/vaporwave2.jpg);
-    background-position: 50%;
-    background-position-y: 35%;
-    background-size: 100%;
-    text-align: center;
-}
-
 body{
     background-color:#0c1022;
 }
 
-div#image1{
+ul{
+    margin-left: 2vw;
+    color: #a9a9a9;
+}
+
+#info{
     size-adjust: 10vw;
     background-size: 10vw;
-    border: red 10px solid;
+    flex-direction: column;
+    color: #a9a9a9;
 
 }
 
-p, h1{
-    color: #00ccff;
+#reste{
+    display: inline;
+    margin-right: 5vw;
 }
+
+h2{
+    font-size: 3vh;
+    margin-bottom: 2vh;
+    margin-top: 2vh;
+    text-decoration: underline solid;
+}
+
+.cv{
+    flex-direction: row-reverse;
+    display: flex;
+    justify-content: center;
+}
+
 h3, h2{
     color: #ee00ff;
 }
 
-div#info{
-    block-size: auto;
-    text-align:right ;
-}
 
 div#contact {
-    font-size: x-large;
+   
+}
+
+div#id {
+
+
 }

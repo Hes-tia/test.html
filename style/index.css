@@ -1,0 +1,40 @@
+
+  main{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction:column ;
+    background-color: #3e3e3e;
+    padding-top: 5vh;
+  }
+
+  article{
+    width: 80%;
+    background-color: #f5f5f5;
+    box-shadow: #000000 5px 5px 10px 0;
+    padding: 20px;
+    margin-bottom: 3vh;
+  }
+
+  article>H2 {
+    color: #ffa500 ;
+    font-size: 1.2em;
+  }
+
+  article>H3{
+    color: #ffa500 ;
+    font-size: 1em;
+    margin-bottom: 1.5vh;
+  }
+
+  article>p, article>ul {
+    font-size: 0.7em;
+  }
+
+  article>ul {
+    margin-left: 2vw ;
+  }
+
+  .espace {
+    height: 25vh;
+  }
