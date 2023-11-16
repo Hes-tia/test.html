@@ -19,16 +19,20 @@ ul{
 }
 
 #info{
+    width: 30%;
     size-adjust: 10vw;
     background-size: 10vw;
     flex-direction: column;
     color: #a9a9a9;
+    font-size: 2vh;
 
 }
 
 #reste{
+    width: 70%;
     display: inline;
     margin-right: 5vw;
+    font-size: 2vh;
 }
 
 h2{
@@ -45,15 +49,5 @@ h2{
 }
 
 h3, h2{
-    color: #ee00ff;
-}
-
-
-div#contact {
-   
-}
-
-div#id {
-
-
+    color: #ff0000;
 }

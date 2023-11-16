@@ -1,6 +1,10 @@
 @font-face {
     font-family:"lobster" ;
     src: url("./Lobster.otf");
+    
+}
+
+@font-face {
     font-family:"bricks" ;
     src: url(./brick.ttf);
 
@@ -67,7 +71,7 @@ nav{
     overflow:hidden;
     text-decoration:underline;
     letter-spacing: 0.01vw;
-    font-size: 1.7vh;
+    font-size: 1em;
     width: 10vw;
     font-family: bricks ;
     display: block;

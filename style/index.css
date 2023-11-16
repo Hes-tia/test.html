@@ -14,21 +14,22 @@
     box-shadow: #000000 5px 5px 10px 0;
     padding: 20px;
     margin-bottom: 3vh;
+    margin-top: 3vh;
   }
 
   article>H2 {
     color: #ffa500 ;
-    font-size: 1.2em;
+    font-size: 4vh;
   }
 
   article>H3{
     color: #ffa500 ;
-    font-size: 1em;
+    font-size: 3vh;
     margin-bottom: 1.5vh;
   }
 
   article>p, article>ul {
-    font-size: 0.7em;
+    font-size: 2vh;
   }
 
   article>ul {
@@ -36,5 +37,29 @@
   }
 
   .espace {
-    height: 25vh;
+    /*imagine glissante*/
+    height: 40vh;
+    width: 100%;
+    background-image: url(../assets/groupePN2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position-y: 30vh;
+    /*text*/
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+    color: #3e3e3e;
+    padding-right: 2vw ;
+  }
+
+  iframe{
+    width: 80%;
+    aspect-ratio:16/9 ;
+    margin-left: 10%;
+  }
+
+  #last{
+    margin-bottom: 15vh ;
   }
