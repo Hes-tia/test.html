@@ -6,8 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>javascript</title>
     <link rel="stylesheet" href="../style/style.css">
-    <link rel="stylesheet" href="#">
-    <script src="../javascript/script.js"></script>
+    <link rel="stylesheet" href="../style/javascript.css">
+    <script src="../javascript/game.js" defer></script>
+    <!--<script src="../javascript/script.js"></script>-->
 </head>
 <body>
     <!--ah-->
@@ -23,21 +24,20 @@
     </nav>
     
     <main>
-       <div id="gameMenu">
+       <div id="gameMenu" class="game-container">
         <label for="menu">Choisissez votre jeu</label>
         <select name="menu" id="menu">
-            <option value="1">choisisser</option>
-            <option value="2">juste nombre</option>
-            <option value="3"></option>
-            <option value="4"></option>
-            <option value="5"></option>
+            <option value="0" selected>choix</option>
+            <option value="1">juste prix</option>
+            <option value="2">rien</option>
+            <option value="3">rien</option>
+            <option value="4">rien</option>
 
         </select>
-        
-        
+
        </div>
 
-       <div id="gameZone">
+       <div id="gameZone" class="game-container">
 
        </div>
     </main>
