@@ -2,6 +2,7 @@
 
 let menu=document.getElementById("menu")
 let zone=document.getElementById("gameZone")
+let isWin=false
 
 /*definir les fonctions*/
 
@@ -66,13 +67,18 @@ function fairNumber() {
         if(isNaN(userNumber)){message ="entrer un nombre"}
         else if(userNumber>randomTarget){message +="c'est moins"}
         else if(userNumber<randomTarget){message +="c'est plus"}
-        else{message += `bravo vous avez gagné`}
+        else{message += `bravo vous avez gagné`
+        isWin=true
+        }
 
         let newMessage=document.createElement('p')
         newMessage.innerHTML=message
         zone.appendChild(newMessage)
         
     }
+
+    
+
 }
 
 //config les event

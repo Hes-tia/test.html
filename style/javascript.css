@@ -24,3 +24,13 @@ main {
     border: #f5f5f5 solid 5px;
     border-radius: 5px;
 }
+
+header>button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 25%;
+    width: 5%;
+}

@@ -8,22 +8,24 @@
     <link rel="stylesheet" href="../style/style.css">
     <link rel="stylesheet" href="../style/javascript.css">
     <script src="../javascript/game.js" defer></script>
-    <!--<script src="../javascript/script.js"></script>-->
+    <script src="../javascript/nav.js" defer></script>
+    <!--<script src="../javascript/script.js></script>"-->
 </head>
 <body>
     <!--ah-->
     <header>
         <h1>javascript</h1>
+        <button id="triggerbutton" class="button">menu</button>
     </header>
 
-    <nav>
+    <nav id="nav">
         <a class="bouton" href="../index.html">accueil</a>
         <a class="bouton" href="../pages/CV.html">cv</a>
         <a class="bouton" href="../pages/javascript.html">javascript</a>
         <a class="bouton" href="../pages/perso.html">perso</a>
     </nav>
     
-    <main>
+    <main id="main">
        <div id="gameMenu" class="game-container">
         <label for="menu">Choisissez votre jeu</label>
         <select name="menu" id="menu">

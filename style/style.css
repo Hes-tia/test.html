@@ -51,8 +51,10 @@ header>h2{
 }
 
 nav{
+    transition: left 0.3s; 
     position: fixed;
     top:15vh ;
+    left: -15vw;
     z-index: 10;
     border-right:0.4vw solid #a9a9a9;
     background-image: url(../assets/paterne.jpg);
@@ -91,10 +93,11 @@ nav{
 
 
 main {
+    transition: left 0.3s; 
     padding: 2vh;
     position: relative;
     top: 15vh;
-    left: 15vw;
+    left: 7.5vw;
     width: 85vw;
     font-size: 4vh;
 
