@@ -26,6 +26,8 @@ function menuChange() {
 function reset() {
     zone.innerHTML=""
 }
+
+
 /**
  * cette fontion déclenche le jeu du juste prix
  */
@@ -49,7 +51,7 @@ function fairNumber() {
     inputLabel.setAttribute('for', 'playerInput')
     inputLabel.innerHTML="devinez un nombre entre 1 et 100"
 
-    let submitButton=document.createElement('button') 
+    let submitButton=document.createElement('button')
     submitButton.innerHTML="Valider"
     submitButton.addEventListener('click', compareNumber)
 
@@ -74,11 +76,11 @@ function fairNumber() {
         let newMessage=document.createElement('p')
         newMessage.innerHTML=message
         zone.appendChild(newMessage)
+
+        if(isWin){zone.removeChild(submitButton)}
         
     }
-
     
-
 }
 
 //config les event
