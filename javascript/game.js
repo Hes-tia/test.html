@@ -90,8 +90,11 @@ function ticTacToe(){
     reset()
 
     //variable
-
     let squares=[]
+    let score=[]
+    let isActive=[]
+    let redPlayer=true
+
     //mise en page de la zone
     let infoPanel=document.createElement('div')
     infoPanel.classList.add('infoPanel')
@@ -110,15 +113,84 @@ function ticTacToe(){
         square.classList.add('square')
         grid.appendChild(square)
         squares.push(square)
+        isActive.push(true)
+        score.push(0)
     }
 
     for(let i=0; i<9; i++){
-        squares[i].addEventListener('click',squareClick.bind(squares[i]))
+        squares[i].addEventListener('click',squareClick.bind(squares[i],i))
     }
 
-    function squareClick(){
-        this.style.backgroundImage='url("../assets/rouge.png")'
+    //fonctionnement du jeu
+
+    /**
+     * declanche quand on clique sur un carre de la grille
+     */
+    function squareClick(squareNumber){
+        if(isActive[squareNumber]){
+            if(redPlayer){
+                this.style.backgroundImage='url("../assets/rouge.png")' 
+                score[squareNumber]=1
+            }
+            else{
+                this.style.backgroundImage='url("../assets/vert.png")'
+                score[squareNumber]=4
+            }
+            isActive[squareNumber]=false
+            redPlayer=!redPlayer
+            checkVictory()
+            console.log(score)
+        }
+
     }
+
+    function checkVictory(){
+        let lineScore=[
+            score[0]+score[1]+score[2],
+            score[3]+score[4]+score[5],
+            score[6]+score[7]+score[8],
+            score[0]+score[3]+score[6],
+            score[1]+score[4]+score[7],
+            score[2]+score[5]+score[8],
+            score[0]+score[4]+score[8],
+            score[2]+score[4]+score[6]
+        ]
+
+        let endGameMessage=""
+        if(lineScore.includes(3)){
+            endGameMessage="Victoire Rouge"
+            endGame(endGameMessage)
+        }
+        else if(lineScore.includes(12)){
+            endGameMessage="Victoire Vert"
+            endGame(endGameMessage)
+        }
+        else if(!isActive.includes(true)){
+            endGameMessage="égalité"
+            endGame(endGameMessage)
+        }
+        console.log(lineScore)
+    }
+    
+    
+    function endGame(endGameMessage){
+        for(let i=0; i<8; i++){
+            isActive[i]=false
+        }
+
+        let gameOverMessage= document.createElement('h2')
+        gameOverMessage.classList.add('gameOver')
+        gameOverMessage.innerHTML= endGameMessage
+        infoPanel.appendChild(gameOverMessage)
+
+        let restartButton=document.createElement('button')
+        restartButton.classList.add('button')
+        restartButton.innerHTML='recommencer'
+        restartButton.addEventListener('click', ticTacToe)
+        infoPanel.appendChild(restartButton)
+
+    }
+
 }
 
 //config les event
